@@ -6,7 +6,7 @@ class EditDom extends React.Component{
         constructor(props) {
             super(props);
             this.state = {
-                list: [1, 2, 3],
+                list: [1, 2, 3]
             };
             this.addItemFromBottom = this.addItemFromBottom.bind(this);
             this.addItemFromTop = this.addItemFromTop.bind(this);
@@ -15,13 +15,13 @@ class EditDom extends React.Component{
 
         addItemFromBottom() {
             this.setState({
-                list: this.state.list.concat([4]),
+                list: this.state.list.concat([4])
             });
         }
 
         addItemFromTop() {
             this.setState({
-                list: [0].concat(this.state.list),
+                list: [0].concat(this.state.list)
             });
         }
 
@@ -29,7 +29,7 @@ class EditDom extends React.Component{
             const newList = [...this.state.list];
             newList.pop();
             this.setState({
-                list: newList,
+                list: newList
             });
         }
 

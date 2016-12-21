@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import logo     from '../logo.svg';
 import './App.css';
 import User     from '../User';
-import Comp01   from '../component_params';
+//import Comp01   from '../component_params';
 import NoteList from '../component_params/this.props.children';
 import MyTitle  from '../component_params/PropTypes';
 import MyComponent from '../component_params/ref_for_trueDom';
-import EditDom  from  '../component_params/edit_dom';
+//import EditDom  from  '../component_params/edit_dom';
 import LikeButton from '../component_params/this.state'
 import Hello    from '../component_params/component_life'
-const title = 123456;
 
 class App extends Component {
   render() {
@@ -24,8 +23,16 @@ class App extends Component {
                 <code> src/App.js </code>
             and save to reload.
         </p>
+          <ul>
+              <li>
+                  <a href="/#/getParams">通过组件标签中传参，然后在组件JS中获取参数</a>
+              </li>
+              <li>
+                  <a href="/#/editDom">动态编辑DOM</a>
+              </li>
+          </ul>
           <User />
-          <Comp01 params0="我是一个形参(⊙o⊙)哦！！" params1="我是另一个"/>
+          {/*<Comp01 params0="我是一个形参(⊙o⊙)哦！！" params1="我是另一个"/>*/}
           <NoteList>
               <span>we are</span>
               <span>child</span>
@@ -34,7 +41,7 @@ class App extends Component {
           </NoteList>
           <MyTitle />
           <MyComponent/>
-          <EditDom/>
+          {/*<EditDom/>*/}
           <LikeButton/>
           <Hello/>
       </div>
