@@ -12,8 +12,8 @@ class GetRouter extends Component {
             <Router history={hashHistory}>
                 {/*根目录*/}
                 <Route path="/" component={App}/>
-                {/*通过组件标签中传参，然后在组件JS中获取参数*/}
-                <Route path="/getParams" component={Comp01} params0="我是一个形参(⊙o⊙)哦！！" params1="我是另一个"/>
+                {/*规定RestFul风格的带参数的路由，然后在组件JS通过this.props.routeParams属性来获取*/}
+                <Route path="/getParams/:params0(/:params1)" component={Comp01} />
                 {/*编辑DOM*/}
                 <Route path="/editDom" component={EditDom}/>
             </Router>

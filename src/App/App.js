@@ -25,7 +25,7 @@ class App extends Component {
         </p>
           <ul>
               <li>
-                  <a href="/#/getParams">通过组件标签中传参，然后在组件JS中获取参数</a>
+                  <a href="/#/getParams/我是一个形参(⊙o⊙)哦！！/我是另一个">通过组件标签中传参，然后在组件JS中获取参数</a>
               </li>
               <li>
                   <a href="/#/editDom">动态编辑DOM</a>
