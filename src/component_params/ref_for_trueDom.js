@@ -2,12 +2,12 @@
  * Created by wxq on 16-12-21.
  */
 import React from 'react';
-var MyComponent = React.createClass({
-    handleClick: function() {
+class MyComponent extends React.Component{
+    handleClick() {
         this.refs.myTextInput.focus();
         this.refs.myTextInput.value = '获取到了焦点';
-    },
-    render: function() {
+    }
+    render() {
         return (
             <div>
                 <input type="text" ref="myTextInput" />
@@ -15,5 +15,5 @@ var MyComponent = React.createClass({
             </div>
         );
     }
-});
+}
 export default MyComponent;

@@ -2,8 +2,8 @@
  * Created by wxq on 16-12-21.
  */
 import React from 'react';
-var NotesList = React.createClass({
-    render: function() {
+class NotesList extends React.Component{
+    render() {
         return (
             <ol>
                 {
@@ -14,5 +14,5 @@ var NotesList = React.createClass({
             </ol>
         );
     }
-});
+}
 export default NotesList;

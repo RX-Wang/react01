@@ -2,14 +2,21 @@
  * Created by wxq on 16-12-21.
  */
 import React from 'react';
-var Hello = React.createClass({
-    getInitialState: function () {
+class Hello extends React.Component{
+    constructor(...args){
+        super(...args);
+        this.state = {
+            opacity: 1.0
+        }
+    }
+
+    /*getInitialState () {
         return {
             opacity: 1.0
         };
-    },
+    }*/
 
-    componentDidMount: function () {
+    componentDidMount () {
         this.timer = setInterval(function () {
             var opacity = this.state.opacity;
             opacity -= .05;
@@ -20,14 +27,14 @@ var Hello = React.createClass({
                 opacity: opacity
             });
         }.bind(this), 100);
-    },
+    }
 
-    render: function () {
+    render () {
         return (
             <div style={{opacity: this.state.opacity}}>
                 Hello {this.props.name}
             </div>
         );
     }
-});
+}
 export default Hello;
