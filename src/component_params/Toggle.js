@@ -1,6 +1,10 @@
 /**
  * Created by wangxuquan on 2017/7/13.
  */
+
+/**
+ *   this.setState  修改 组件的 state
+ */
 import React from 'react';
 class Toggle extends React.Component{
     constructor(props){
