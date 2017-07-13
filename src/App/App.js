@@ -7,8 +7,9 @@ import NoteList from '../component_params/this.props.children';
 import MyTitle  from '../component_params/PropTypes';
 import MyComponent from '../component_params/ref_for_trueDom';
 //import EditDom  from  '../component_params/edit_dom';
-import LikeButton from '../component_params/this.state'
-import Hello    from '../component_params/component_life'
+import LikeButton from '../component_params/this.state';
+import Hello    from '../component_params/component_life';
+import Toggle   from '../component_params/Toggle';
 
 class App extends Component {
   render() {
@@ -44,6 +45,7 @@ class App extends Component {
           {/*<EditDom/>*/}
           <LikeButton/>
           <Hello/>
+          <Toggle/>
       </div>
     );
   }

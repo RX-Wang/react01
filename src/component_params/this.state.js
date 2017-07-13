@@ -6,19 +6,20 @@ class LikeButton extends React.Component{
     constructor(...args){
         super(...args);
         this.state = {
-            liked : 'like'
+            liked : true
         }
     }
     /*getInitialState() {
         return {liked: false};
     }*/
+
     handleClick (event) {
         this.setState({liked: !this.state.liked});
     }
     render() {
         let text = this.state.liked ? 'like' : 'haven\'t liked';
         return (
-            <p onClick={this.handleClick}>
+            <p onClick={this.handleClick.bind(this)}>
                 You {text} this. Click to toggle.
             </p>
         );
