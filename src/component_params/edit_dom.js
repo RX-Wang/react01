@@ -2,6 +2,7 @@
  * Created by wxq on 16-12-21.
  */
 import React from 'react';
+import {Link} from 'react-router';
 class EditDom extends React.Component{
         constructor(props) {
             super(props);
@@ -14,14 +15,17 @@ class EditDom extends React.Component{
         }
 
         addItemFromBottom() {
+            console.log(this.state.list);
+            console.log(this.state.list instanceof Array);
+            console.log('list长度--%d',this.state.list.length);
             this.setState({
-                list: this.state.list.concat([4])
+                list: this.state.list.concat([(this.state.list.length + 1)])
             });
         }
 
         addItemFromTop() {
             this.setState({
-                list: [0].concat(this.state.list)
+                list: [this.state.list.length - 1].concat(this.state.list)
             });
         }
 
@@ -40,7 +44,12 @@ class EditDom extends React.Component{
                     <button onClick={this.addItemFromBottom}>尾部插入 Dom 元素</button>
                     <button onClick={this.addItemFromTop}>头部插入 Dom 元素</button>
                     <button onClick={this.deleteItem}>删除 Dom 元素</button>
+                    {/*渲染嵌套DOM*/}
+                    {this.props.children}
+                    <Link to="editDom/Conditional01/001">条件渲染01</Link>
+                    <Link to="editDom/Conditional02/002">条件渲染02</Link>
                 </div>
+
             );
         }
     }
