@@ -7,6 +7,7 @@ import App from '../App/App';
 import EditDom from '../component_params/edit_dom';
 import Comp01   from '../component_params';
 import Conditional   from '../component_params/Conditional';
+import LiftingStateUp   from '../component_params/lifting-state-up';
 class GetRouter extends Component {
     render(){
         return (
@@ -24,7 +25,8 @@ class GetRouter extends Component {
                 </Route>
                 {/*条件渲染*/}
                 <Route path="Conditional" component={Conditional}/>
-
+                {/*状态提升*/}
+                <Route path="lifting-state-up" component={LiftingStateUp}/>
             </Router>
         )
     }
