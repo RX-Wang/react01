@@ -11,7 +11,7 @@ import MyComponent from '../component_params/ref_for_trueDom';
 import LikeButton from '../component_params/this.state';
 import Hello    from '../component_params/component_life';
 import Toggle   from '../component_params/Toggle';
-import Counter_redux   from '../component_params/redux-counter';
+
 const disBlock = {display : "block"};
 class App extends Component {
   render() {
@@ -56,7 +56,8 @@ class App extends Component {
           <Toggle/>
           {/*状态提升*/}
           <Link style={disBlock} to="/lifting-state-up">状态提升</Link>
-          {/*<Counter_redux/>*/}
+          {/*redux 示例*/}
+          <Link to="/redux">Redux App</Link>
       </div>
     );
   }
