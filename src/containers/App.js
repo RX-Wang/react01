@@ -58,8 +58,8 @@ function selectTodos(todos, filter) {
 // Note: use https://github.com/faassen/reselect for better performance.
 function select(state) {
     return {
-        visibleTodos: selectTodos(state.todos, state.visibilityFilter),
-        visibilityFilter: state.visibilityFilter
+        visibleTodos        : selectTodos(state.todos, state.visibilityFilter),
+        visibilityFilter    : state.visibilityFilter
     }
 }
 
