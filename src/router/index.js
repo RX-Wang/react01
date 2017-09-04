@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import { Router, Route, hashHistory } from 'react-router';
 import App from '../App/App';
 import EditDom from '../component_params/edit_dom';
+import FormDom from '../component_params/form_dom';
 import Comp01   from '../component_params';
 import Conditional   from '../component_params/Conditional';
 import LiftingStateUp   from '../component_params/lifting-state-up';
@@ -17,7 +18,8 @@ class GetRouter extends Component {
                 <Route path="/" component={App}/>
                 {/*规定RestFul风格的带参数的路由，然后在组件JS通过this.props.routeParams属性来获取*/}
                 <Route path="getParams/:params0(/:params1)" component={Comp01} />
-                {/*编辑DOM*/}
+                {/*form表单提交*/}
+                <Route path="/to-form" component={FormDom}/>
                 <Route path="editDom" component={EditDom}>
                     {/*条件渲染*/}
                     <Route path="Conditional01/:p" component={Conditional}/>

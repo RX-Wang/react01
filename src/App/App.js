@@ -39,6 +39,9 @@ class App extends Component {
                   {/*<a href="/#/Conditional">条件渲染</a>*/}
                   <Link to="/Conditional">条件渲染</Link>
               </li>
+              <li>
+                  <a href="/#/to-form">form表单提交</a>
+              </li>
           </ul>
           <User />
           {/*<Comp01 params0="我是一个形参(⊙o⊙)哦！！" params1="我是另一个"/>*/}
