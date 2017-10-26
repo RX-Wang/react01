@@ -5,6 +5,12 @@ import { combineReducers } from 'redux'
 import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from './actions'
 const { SHOW_ALL } = VisibilityFilters;
 
+/**
+ * 这是一个Reducer
+ * @param state
+ * @param action
+ * @returns {NodeFilter|*}
+ */
 function visibilityFilter(state = SHOW_ALL, action) {
     switch (action.type) {
         case SET_VISIBILITY_FILTER:
@@ -14,6 +20,12 @@ function visibilityFilter(state = SHOW_ALL, action) {
     }
 }
 
+/**
+ * 这是另一个Reducer
+ * @param state
+ * @param action
+ * @returns {*}
+ */
 function todos(state = [], action) {
     switch (action.type) {
         case ADD_TODO:
@@ -37,6 +49,9 @@ function todos(state = [], action) {
     }
 }
 
+/**
+ * 这里通过 redux的combineReducers 将上述两个Reducer结合到一起。
+ */
 const todoApp = combineReducers({
     visibilityFilter,
     todos

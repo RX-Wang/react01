@@ -16,10 +16,14 @@ import ReactDOM         from 'react-dom';
 import GetRouter        from './router';
 import { createStore }  from 'redux';
 import { Provider }     from 'react-redux';
-import todoApp          from './reducers';
+import todoApp          from './reducers';  //所有的Reducer
 import App              from './containers/App'
 
-
+/**
+ * 创建 Redux store 来存放应用的状态。
+ *
+ * API 是 { subscribe, dispatch, getState }。
+ */
 let store = createStore(todoApp);
 
 /**
