@@ -2,7 +2,8 @@
  * Created by wangxuquan on 2017/8/10.
  */
 import { combineReducers } from 'redux'
-import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from './actions'
+import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../actions'
+import { person } from './person';
 const { SHOW_ALL } = VisibilityFilters;
 
 /**
@@ -54,7 +55,8 @@ function todos(state = [], action) {
  */
 const todoApp = combineReducers({
     visibilityFilter,
-    todos
+    todos,
+    person
 });
 
 export default todoApp

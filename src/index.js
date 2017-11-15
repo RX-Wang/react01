@@ -14,17 +14,21 @@ import ReactDOM         from 'react-dom';
 //import App from './App/App';
 //import EditDom from './component_params/edit_dom';
 import GetRouter        from './router';
-import { createStore }  from 'redux';
+import { createStore,applyMiddleware }  from 'redux';
+import thunkMiddleware  from 'redux-thunk';
 import { Provider }     from 'react-redux';
 import todoApp          from './reducers';  //所有的Reducer
-import App              from './containers/App'
-
+//import App              from './containers/App'
+const middleware = [thunkMiddleware];
 /**
  * 创建 Redux store 来存放应用的状态。
  *
  * API 是 { subscribe, dispatch, getState }。
  */
-let store = createStore(todoApp);
+let store = createStore(
+    todoApp,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),   //开启Redux Tool
+    applyMiddleware(...middleware));
 
 /**
  * 配上 Redux 的方式

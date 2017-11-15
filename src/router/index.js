@@ -10,6 +10,7 @@ import Comp01   from '../component_params';
 import Conditional   from '../component_params/Conditional';
 import LiftingStateUp   from '../component_params/lifting-state-up';
 import ReduxApp from '../containers/App';
+import ReduxPerson from '../containers/Person'
 class GetRouter extends Component {
     render(){
         return (
@@ -31,6 +32,7 @@ class GetRouter extends Component {
                 {/*状态提升*/}
                 <Route path="lifting-state-up" component={LiftingStateUp}/>
                 <Route path="redux" component={ReduxApp}/>
+                <Route path="redux/person" component={ReduxPerson} />
             </Router>
         )
     }
