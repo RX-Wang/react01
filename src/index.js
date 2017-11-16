@@ -1,34 +1,22 @@
-/*
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App/App';
-import './index.css';
-
-ReactDOM.render(
-  <App /> ,document.getElementById('root')
-);
-*/
 import React            from 'react';
-//import { Router, Route, hashHistory } from 'react-router';
 import ReactDOM         from 'react-dom';
-//import App from './App/App';
-//import EditDom from './component_params/edit_dom';
 import GetRouter        from './router';
 import { createStore,applyMiddleware }  from 'redux';
 import thunkMiddleware  from 'redux-thunk';
 import { Provider }     from 'react-redux';
-import todoApp          from './reducers';  //所有的Reducer
+import rootReducer          from './reducers';  //所有的Reducer
 //import App              from './containers/App'
-const middleware = [thunkMiddleware];
+const middleware = [thunkMiddleware];   //让我们可以使用异步的action
 /**
- * 创建 Redux store 来存放应用的状态。
- *
+ * createStore，接收reducer 创建 Redux store 来存放应用的状态。
  * API 是 { subscribe, dispatch, getState }。
  */
 let store = createStore(
-    todoApp,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),   //开启Redux Tool
-    applyMiddleware(...middleware));
+    rootReducer,
+    //开启Redux Tool
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),   
+    applyMiddleware(...middleware)
+);
 
 /**
  * 配上 Redux 的方式
