@@ -12,7 +12,7 @@ import LikeButton from '../component_params/this.state';
 import Hello    from '../component_params/component_life';
 import Toggle   from '../component_params/Toggle';
 
-const disBlock = {display : "block"};
+const disBlock = {display : "inline-block",margin:"20px 20px 20px 5px"};
 class App extends Component {
   render() {
     return (
@@ -60,7 +60,9 @@ class App extends Component {
           {/*状态提升*/}
           <Link style={disBlock} to="/lifting-state-up">状态提升</Link>
           {/*redux 示例*/}
-          <Link to="/redux">Redux App</Link>
+          <Link style={disBlock} to="/redux">Redux App</Link>
+          {/*生命周期 示例*/}
+          <Link style={disBlock} to="/lifeCycle">生命周期实验</Link>
       </div>
     );
   }

@@ -16,7 +16,7 @@ export const GROW_UP_ASYNC  = 'GROW_UP_ASYNC';
 export const CHANGE_ADDRESS  = 'CHANGE_ADDRESS';    //改变地址，如果家庭地址和学校地址都监听它的话会导致两者都发生改变
 export const CHANGE_SCHOOLADDRESS  = 'CHANGE_SCHOOLADDRESS';
 export const CHANGE_HOMEADDRESS  = 'CHANGE_HOMEADDRESS';
-
+export const CHANGE_NAME  = 'CHANGE_NAME';
 
 /*
  * 其它的常量
@@ -80,4 +80,9 @@ export function grow_up_async(growed_age){
             dispatch({type : GROW_UP_ASYNC, age : growed_age });
         }, 3000);
     }
+}
+
+//验证生命周期--action creator
+export function changeName(newName){
+    return {type: CHANGE_NAME, name : newName};
 }

@@ -11,6 +11,7 @@ import Conditional   from '../component_params/Conditional';
 import LiftingStateUp   from '../component_params/lifting-state-up';
 import ReduxApp from '../containers/App';
 import ReduxPerson from '../containers/Person'
+import LifeCycle from '../containers/LifeCycle'
 class GetRouter extends Component {
     render(){
         return (
@@ -33,6 +34,8 @@ class GetRouter extends Component {
                 <Route path="lifting-state-up" component={LiftingStateUp}/>
                 <Route path="redux" component={ReduxApp}/>
                 <Route path="redux/person" component={ReduxPerson} />
+                {/*生命周期实验*/}
+                <Route path="lifeCycle" component={LifeCycle} />
             </Router>
         )
     }
