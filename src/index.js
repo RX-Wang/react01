@@ -14,7 +14,7 @@ const middleware = [thunkMiddleware];   //让我们可以使用异步的action
 let store = createStore(
     rootReducer,
     //开启Redux Tool
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),   
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(...middleware)
 );
 
