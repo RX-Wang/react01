@@ -63,6 +63,8 @@ class App extends Component {
           <Link style={disBlock} to="/redux">Redux App</Link>
           {/*生命周期 示例*/}
           <Link style={disBlock} to="/lifeCycle">生命周期实验</Link>
+          {/*学习 示例*/}
+          <Link style={disBlock} to="/learning">学习 示例</Link>
       </div>
     );
   }

@@ -15,6 +15,7 @@ const defaultState = {
 export function lifeCycle(state = defaultState, action) {
     switch (action.type) {
         case CHANGE_NAME:
+            console.log('reducer监听到了changeName事件:',action.name);
             return {
                 ...state,
                 name : action.name

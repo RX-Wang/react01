@@ -84,5 +84,6 @@ export function grow_up_async(growed_age){
 
 //验证生命周期--action creator
 export function changeName(newName){
+    console.log('action--接收到了changeName事件:',newName);
     return {type: CHANGE_NAME, name : newName};
 }

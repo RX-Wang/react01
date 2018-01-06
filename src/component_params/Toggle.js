@@ -14,13 +14,13 @@ class Toggle extends React.Component{
     }
 
     handleClick(){
-        //写法一：
+        //写法一：对象方式
         /*
         this.setState({
             isToggleOn : !this.state.isToggleOn
         })
         */
-        //写法二
+        //写法二：函数式(currentState,currentProps)
         this.setState(currentState =>(
             {isToggleOn : !currentState.isToggleOn}
         ))
