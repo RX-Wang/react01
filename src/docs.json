@@ -1,0 +1,34 @@
+{
+  "docs":[
+    { "type":"类型一", "title": "类型一文章1", "href": "localhost:8080/1/1"},
+    { "type":"类型一", "title": "类型一文章2", "href": "localhost:8080/1/2"},
+    { "type":"类型一", "title": "类型一文章3", "href": "localhost:8080/1/3"},
+    { "type":"类型一", "title": "类型一文章4", "href": "localhost:8080/1/4"},
+    { "type":"类型一", "title": "类型一文章5", "href": "localhost:8080/1/5"},
+    { "type":"类型一", "title": "类型一文章6", "href": "localhost:8080/1/6"},
+    { "type":"类型一", "title": "类型一文章7", "href": "localhost:8080/1/7"},
+    { "type":"类型二", "title": "类型二文章1", "href": "localhost:8080/2/1"},
+    { "type":"类型二", "title": "类型二文章2", "href": "localhost:8080/2/2"},
+    { "type":"类型二", "title": "类型二文章3", "href": "localhost:8080/2/3"},
+    { "type":"类型二", "title": "类型二文章4", "href": "localhost:8080/2/4"},
+    { "type":"类型二", "title": "类型二文章5", "href": "localhost:8080/2/5"},
+    { "type":"类型二", "title": "类型二文章6", "href": "localhost:8080/2/6"},
+    { "type":"类型三", "title": "类型三文章1", "href": "localhost:8080/3/1"},
+    { "type":"类型三", "title": "类型三文章2", "href": "localhost:8080/3/2"},
+    { "type":"类型三", "title": "类型三文章3", "href": "localhost:8080/3/3"},
+    { "type":"类型三", "title": "类型三文章4", "href": "localhost:8080/3/4"},
+    { "type":"类型三", "title": "类型三文章5", "href": "localhost:8080/3/5"},
+    { "type":"类型三", "title": "类型三文章6", "href": "localhost:8080/3/6"},
+    { "type":"类型三", "title": "类型三文章7", "href": "localhost:8080/3/7"},
+    { "type":"类型四", "title": "类型四文章1", "href": "localhost:8080/4/1"},
+    { "type":"类型四", "title": "类型四文章2", "href": "localhost:8080/4/2"},
+    { "type":"类型四", "title": "类型四文章3", "href": "localhost:8080/4/3"},
+    { "type":"类型四", "title": "类型四文章4", "href": "localhost:8080/4/4"},
+    { "type":"类型四", "title": "类型四文章5", "href": "localhost:8080/4/5"},
+    { "type":"类型四", "title": "类型四文章6", "href": "localhost:8080/4/6"},
+    { "type":"类型四", "title": "类型四文章7", "href": "localhost:8080/4/7"}
+  ],
+  "hotSearch" : [
+    "文章2","文章3","文章4","文章5","文章6"
+  ]
+}

@@ -17,6 +17,9 @@ export const CHANGE_ADDRESS  = 'CHANGE_ADDRESS';    //改变地址，如果家�
 export const CHANGE_SCHOOLADDRESS  = 'CHANGE_SCHOOLADDRESS';
 export const CHANGE_HOMEADDRESS  = 'CHANGE_HOMEADDRESS';
 export const CHANGE_NAME  = 'CHANGE_NAME';
+export const INIT_DOCS  = 'INIT_DOCS';
+export const SEARCHING_DOCS  = 'SEARCHING_DOCS';
+export const SEARCH_DOCS_SUCCESS  = 'SEARCH_DOCS_SUCCESS';
 
 /*
  * 其它的常量
@@ -86,4 +89,24 @@ export function grow_up_async(growed_age){
 export function changeName(newName){
     console.log('action--接收到了changeName事件:',newName);
     return {type: CHANGE_NAME, name : newName};
+}
+
+// 搜索文章
+export function searchDoc(val) {
+    return (dispatch, getState) => {
+        if (val) {
+            dispatch({
+                type: SEARCHING_DOCS,
+            })
+            dispatch({
+                type: SEARCH_DOCS_SUCCESS,
+                resultDocs: getState().initDocs.docs.filter(elem => elem.title.indexOf(val) > -1),
+            })
+        } else {
+            dispatch({
+                type: INIT_DOCS,
+                resultDocs: getState().initDocs.docs,
+            })
+        }
+    }
 }

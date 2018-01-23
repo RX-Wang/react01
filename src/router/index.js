@@ -13,6 +13,9 @@ import ReduxApp from '../containers/App';
 import ReduxPerson from '../containers/Person'
 import LifeCycle from '../containers/LifeCycle'
 import Learning from '../components/Learning'
+import IntervalRenderChildren from '../components/IntervalRenderChildren'
+import SearchDoc from '../containers/SearchDoc'
+
 class GetRouter extends Component {
     render(){
         return (
@@ -39,6 +42,10 @@ class GetRouter extends Component {
                 <Route path="lifeCycle" component={LifeCycle} />
                 {/*学习*/}
                 <Route path="learning" component={Learning} age={9}/>
+                {/* 定时器循环渲染含有children的组件 */}
+                <Route path="intervalRenderChildren" component={IntervalRenderChildren}/>
+                {/* 搜索文章的组件 */}
+                <Route path="searchDoc" component={SearchDoc}/>
             </Router>
         )
     }

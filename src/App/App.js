@@ -11,6 +11,7 @@ import MyComponent from '../component_params/ref_for_trueDom';
 import LikeButton from '../component_params/this.state';
 import Hello    from '../component_params/component_life';
 import Toggle   from '../component_params/Toggle';
+import Testt   from '../component_params/Testt';
 
 const disBlock = {display : "inline-block",margin:"20px 20px 20px 5px"};
 class App extends Component {
@@ -65,6 +66,10 @@ class App extends Component {
           <Link style={disBlock} to="/lifeCycle">生命周期实验</Link>
           {/*学习 示例*/}
           <Link style={disBlock} to="/learning">学习 示例</Link>
+          {/*学习 示例*/}
+          <Link style={disBlock} to="/intervalRenderChildren">定时器循环渲染含有children的组件</Link>
+          <Link style={disBlock} to="/searchDoc">文章搜索</Link>
+          <Testt />
       </div>
     );
   }

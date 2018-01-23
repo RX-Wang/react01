@@ -6,6 +6,7 @@ import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } fro
 import { person } from './person';
 import { student } from './student';
 import { lifeCycle } from './lifeCycle';
+import { initDocs, resultDocs } from './docs';
 const { SHOW_ALL } = VisibilityFilters;
 
 /**
@@ -60,7 +61,8 @@ const todoApp = combineReducers({
     todos,
     person,
     student,
-    lifeCycle
+    lifeCycle,
+    initDocs, resultDocs,
 });
 
 export default todoApp
